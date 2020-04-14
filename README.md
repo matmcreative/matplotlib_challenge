@@ -1,3 +1,4 @@
+HEAD
 # Matplotlib Homework - The Power of Plots
 
 ## Background
@@ -73,3 +74,5 @@ Here are some final considerations:
 ### Copyright
 
 Trilogy Education Services © 2019. All Rights Reserved.
+
+# matplotlib_challenge
