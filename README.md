@@ -1,31 +1,58 @@
-HEAD
-# Matplotlib Homework - The Power of Plots
+# Pharmaceutical Data Visualization | Matplotlib
+
+## Table of Contents
+* [Objective](#Objective)
+* [Technologies](#Technologies)
+* [Process](#Process)
+* [Visualization](#Visualization)
+* [Troubleshooting](#Troubleshooting)
+
+<img src="Images/Laboratory.jpg" width=350 align=right>
+# Objective
+Provide a top-level summary of the study results, generating tables and figures to tell the story.
 
 ## Background
 
-What good is data without a good plot to tell the story?
+Pymaceuticals Inc., a burgeoning pharmaceutical company based out of San Diego, specializes in anti-cancer pharmaceuticals. In its most recent efforts, it began screening for potential treatments for squamous cell carcinoma (SCC), a commonly occurring form of skin cancer.
 
-So, let's take what you've learned about Python Matplotlib and apply it to a real-world situation and dataset:
+Their most recent animal study contains data on 250 mice identified with SCC tumor growth.  The mice were treated through a variety of drug regimens. Over the course of 45 days, tumor development was observed and measured. The purpose of this study was to compare the performance of Pymaceuticals' drug of interest, Capomulin, versus the other treatment regimens. 
 
-![Laboratory](Images/Laboratory.jpg)
+# Technologies
 
-While your data companions rushed off to jobs in finance and government, you remained adamant that science was the way for you. Staying true to your mission, you've joined Pymaceuticals Inc., a burgeoning pharmaceutical company based out of San Diego. Pymaceuticals specializes in anti-cancer pharmaceuticals. In its most recent efforts, it began screening for potential treatments for squamous cell carcinoma (SCC), a commonly occurring form of skin cancer.
+* Python 
+* Pandas
+* Matplotlib
 
-As a senior data analyst at the company, you've been given access to the complete data from their most recent animal study. In this study, 250 mice identified with SCC tumor growth were treated through a variety of drug regimens. Over the course of 45 days, tumor development was observed and measured. The purpose of this study was to compare the performance of Pymaceuticals' drug of interest, Capomulin, versus the other treatment regimens. You have been tasked by the executive team to generate all of the tables and figures needed for the technical report of the study. The executive team also has asked for a top-level summary of the study results.
-
-## Instructions
-
-Your tasks are to do the following:
+# Process
 
 * Generate a summary statistics table consisting of the mean, median, variance, standard deviation, and SEM of the tumor volume for each drug regimen.
+```
+summarystats = pd.DataFrame(study_data.groupby("Drug Regimen").count())
+#Use groupby to create summary stats by drug regime, add results into columns in summarystats
+
+summarystats["Mean"] = pd.DataFrame(study_data.groupby("Drug Regimen")["Tumor Volume (mm3)"].mean())
+summarystats["Median"] = pd.DataFrame(study_data.groupby("Drug Regimen")["Tumor Volume (mm3)"].median())
+summarystats["Standard Deviation"] = pd.DataFrame(study_data.groupby("Drug Regimen")["Tumor Volume (mm3)"].std())
+summarystats["Variance"] = pd.DataFrame(study_data.groupby("Drug Regimen")["Tumor Volume (mm3)"].var())
+summarystats["SEM"] = pd.DataFrame(study_data.groupby("Drug Regimen")["Tumor Volume (mm3)"].sem())
+
+#Clean up columns, just keeping a count column for some of the graphs below
+summarystats = summarystats[["Mouse ID", "Mean", "Median", "Standard Deviation", "Variance", "SEM"]]
+
+#Rename count column
+summarystats = summarystats.rename(columns = {"Mouse ID" : "Trials"})
+
+summarystats.head()
+```
+<img src="../Pymaceuticals/Images/summarystats.png" width=350 align=right>
 
 * Generate a bar plot using both Pandas's `DataFrame.plot()` and Matplotlib's `pyplot` that shows the number of data points for each treatment regimen.
 
-  * **NOTE:** These plots should look identical.
+<img src="../Pymaceuticals/Images/summarystats.png" width=350 align=right>
 
 * Generate a pie plot using both Pandas's `DataFrame.plot()` and Matplotlib's `pyplot` that shows the distribution of female or male mice in the study.
 
-  * **NOTE:** These plots should look identical.
+<img src="../Pymaceuticals/Images/summarystats.png" width=350 align=right>
 
 * Calculate the final tumor volume of each mouse across four of the most promising treatment regimens: Capomulin, Ramicane, Infubinol, and Ceftamin. Calculate the quartiles and IQR and quantitatively determine if there are any potential outliers across all four treatment regimens.
 
@@ -57,6 +84,8 @@ Here are some final considerations:
 
 * While you are trying to complete this assignment, feel encouraged to constantly refer to Stack Overflow and the Pandas documentation. These are needed tools in every data analyst's tool belt.
 
+
+# Troubleshooting
 * Remember, there are many ways to approach a data problem. The key is to break up your task into micro tasks. Try answering questions like:
 
   * How does my DataFrame need to be structured for me to have the right _x_-axis and _y_-axis?
@@ -70,9 +99,3 @@ Here are some final considerations:
   Again, don't let the magnitude of a programming task scare you off. Ultimately, every programming problem boils down to a handful of bite-sized tasks.
 
 * Get help when you need it! There is never any shame in asking. But, as always, ask a _specific_ question. You'll never get a great answer to "I'm lost."
-
-### Copyright
-
-Trilogy Education Services © 2019. All Rights Reserved.
-
-# matplotlib_challenge
