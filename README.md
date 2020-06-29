@@ -9,6 +9,7 @@
 * [Troubleshooting](#Troubleshooting)
 
 <img src="Images/Laboratory.jpg" width=350 align=right>
+
 # Objective
 Provide a top-level summary of the study results, generating tables and figures to tell the story.
 
