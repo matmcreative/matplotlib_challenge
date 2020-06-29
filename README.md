@@ -44,15 +44,15 @@ summarystats = summarystats.rename(columns = {"Mouse ID" : "Trials"})
 
 summarystats.head()
 ```
-<img src="../Pymaceuticals/Images/summarystats.png" width=350 align=right>
+<img src="Pymaceuticals/Images/summarystats.png" width=350 align=right>
 
 * Generate a bar plot using both Pandas's `DataFrame.plot()` and Matplotlib's `pyplot` that shows the number of data points for each treatment regimen.
 
-<img src="../Pymaceuticals/Images/summarystats.png" width=350 align=right>
+<img src="Pymaceuticals/Images/DrugRegimenCount.png" width=350 align=right>
 
 * Generate a pie plot using both Pandas's `DataFrame.plot()` and Matplotlib's `pyplot` that shows the distribution of female or male mice in the study.
 
-<img src="../Pymaceuticals/Images/summarystats.png" width=350 align=right>
+<img src="Pymaceuticals/Images/MiceByGender.png" width=350 align=right>
 
 * Calculate the final tumor volume of each mouse across four of the most promising treatment regimens: Capomulin, Ramicane, Infubinol, and Ceftamin. Calculate the quartiles and IQR and quantitatively determine if there are any potential outliers across all four treatment regimens.
 
