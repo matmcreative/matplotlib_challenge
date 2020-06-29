@@ -23,11 +23,28 @@ Their most recent animal study contains data on 250 mice identified with SCC tum
 * Pandas
 * Matplotlib
 
-## Instructions
-
-Your tasks are to do the following:
+# Process
 
 * Generate a summary statistics table consisting of the mean, median, variance, standard deviation, and SEM of the tumor volume for each drug regimen.
+```
+summarystats = pd.DataFrame(study_data.groupby("Drug Regimen").count())
+#Use groupby to create summary stats by drug regime, add results into columns in summarystats
+
+summarystats["Mean"] = pd.DataFrame(study_data.groupby("Drug Regimen")["Tumor Volume (mm3)"].mean())
+summarystats["Median"] = pd.DataFrame(study_data.groupby("Drug Regimen")["Tumor Volume (mm3)"].median())
+summarystats["Standard Deviation"] = pd.DataFrame(study_data.groupby("Drug Regimen")["Tumor Volume (mm3)"].std())
+summarystats["Variance"] = pd.DataFrame(study_data.groupby("Drug Regimen")["Tumor Volume (mm3)"].var())
+summarystats["SEM"] = pd.DataFrame(study_data.groupby("Drug Regimen")["Tumor Volume (mm3)"].sem())
+
+#Clean up columns, just keeping a count column for some of the graphs below
+summarystats = summarystats[["Mouse ID", "Mean", "Median", "Standard Deviation", "Variance", "SEM"]]
+
+#Rename count column
+summarystats = summarystats.rename(columns = {"Mouse ID" : "Trials"})
+
+summarystats.head()
+```
+<img src="summarystats.png.jpg" width=350 align=right>
 
 * Generate a bar plot using both Pandas's `DataFrame.plot()` and Matplotlib's `pyplot` that shows the number of data points for each treatment regimen.
 
