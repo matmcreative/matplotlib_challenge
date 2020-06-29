@@ -44,21 +44,15 @@ summarystats = summarystats.rename(columns = {"Mouse ID" : "Trials"})
 
 summarystats.head()
 ```
-<img src="Pymaceuticals/Images/summarystats.png" width=350 align=right>
+<img src="Pymaceuticals/Images/summarystats.png" width=500>
 
 * Generate a bar plot using both Pandas's `DataFrame.plot()` and Matplotlib's `pyplot` that shows the number of data points for each treatment regimen.
 
-<img src="Pymaceuticals/Images/DrugRegimenCount.png" width=350 align=right>
-
 * Generate a pie plot using both Pandas's `DataFrame.plot()` and Matplotlib's `pyplot` that shows the distribution of female or male mice in the study.
-
-<img src="Pymaceuticals/Images/MiceByGender.png" width=350 align=right>
 
 * Calculate the final tumor volume of each mouse across four of the most promising treatment regimens: Capomulin, Ramicane, Infubinol, and Ceftamin. Calculate the quartiles and IQR and quantitatively determine if there are any potential outliers across all four treatment regimens.
 
 * Using Matplotlib, generate a box and whisker plot of the final tumor volume for all four treatment regimens and highlight any potential outliers in the plot by changing their color and style.
-
-  **Hint**: All four box plots should be within the same figure. Use this [Matplotlib documentation page](https://matplotlib.org/gallery/pyplots/boxplot_demo_pyplot.html#sphx-glr-gallery-pyplots-boxplot-demo-pyplot-py) for help with changing the style of the outliers.
 
 * Generate a line plot of time point versus tumor volume for a single mouse treated with Capomulin.
 
@@ -68,25 +62,23 @@ summarystats.head()
 
 * Look across all previously generated figures and tables and write at least three observations or inferences that can be made from the data. Include these observations at the top of notebook.
 
-Here are some final considerations:
+# Visualization
+<img src="Pymaceuticals/Images/DrugRegimenCount.png" width=500>
 
-* You must use proper labeling of your plots, to include properties such as: plot titles, axis labels, legend labels, _x_-axis and _y_-axis limits, etc.
+<img src="Pymaceuticals/Images/MiceByGender.png" width=500>
 
-* See the [starter workbook](Pymaceuticals/pymaceuticals_starter.ipynb) for help on what modules to import and expected format of the notebook.
+<img src="Pymaceuticals/Images/drug_summary_table.png" width=500>
 
-## Hints and Considerations
+<img src="Pymaceuticals/Images/box_plot.png" width=500>
 
-* Be warned: These are very challenging tasks. Be patient with yourself as you trudge through these problems. They will take time and there is no shame in fumbling along the way. Data visualization is equal parts exploration, equal parts resolution.
+<img src="Pymaceuticals/Images/line_plot.png" width=500>
 
-* You have been provided a starter notebook. Use the code comments as a reminder of steps to follow as you complete the assignment.
+<img src="Pymaceuticals/Images/Avg_Tumor_Vol_vs_Weight_Capomulin.png" width=500>
 
-* Don't get bogged down in small details. Always focus on the big picture. If you can't figure out how to get a label to show up correctly, come back to it. Focus on getting the core skeleton of your notebook complete. You can always revisit old problems.
-
-* While you are trying to complete this assignment, feel encouraged to constantly refer to Stack Overflow and the Pandas documentation. These are needed tools in every data analyst's tool belt.
+<img src="Pymaceuticals/Images/Avg_Tumor_Vol_vs_Weight_Capomulin_w_regression.png" width=500>
 
 
 # Troubleshooting
-* Remember, there are many ways to approach a data problem. The key is to break up your task into micro tasks. Try answering questions like:
 
   * How does my DataFrame need to be structured for me to have the right _x_-axis and _y_-axis?
 
@@ -95,7 +87,3 @@ Here are some final considerations:
   * How do I add a label to that scatter plot?
 
   * Where would the labels for that scatter plot come from?
-
-  Again, don't let the magnitude of a programming task scare you off. Ultimately, every programming problem boils down to a handful of bite-sized tasks.
-
-* Get help when you need it! There is never any shame in asking. But, as always, ask a _specific_ question. You'll never get a great answer to "I'm lost."
