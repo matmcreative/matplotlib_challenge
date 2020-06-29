@@ -17,6 +17,12 @@ Pymaceuticals Inc., a burgeoning pharmaceutical company based out of San Diego, 
 
 Their most recent animal study contains data on 250 mice identified with SCC tumor growth.  The mice were treated through a variety of drug regimens. Over the course of 45 days, tumor development was observed and measured. The purpose of this study was to compare the performance of Pymaceuticals' drug of interest, Capomulin, versus the other treatment regimens. 
 
+# Technologies
+
+* Python 
+* Pandas
+* Matplotlib
+
 ## Instructions
 
 Your tasks are to do the following:
@@ -61,6 +67,8 @@ Here are some final considerations:
 
 * While you are trying to complete this assignment, feel encouraged to constantly refer to Stack Overflow and the Pandas documentation. These are needed tools in every data analyst's tool belt.
 
+
+# Troubleshooting
 * Remember, there are many ways to approach a data problem. The key is to break up your task into micro tasks. Try answering questions like:
 
   * How does my DataFrame need to be structured for me to have the right _x_-axis and _y_-axis?
@@ -74,9 +82,3 @@ Here are some final considerations:
   Again, don't let the magnitude of a programming task scare you off. Ultimately, every programming problem boils down to a handful of bite-sized tasks.
 
 * Get help when you need it! There is never any shame in asking. But, as always, ask a _specific_ question. You'll never get a great answer to "I'm lost."
-
-### Copyright
-
-Trilogy Education Services © 2019. All Rights Reserved.
-
-# matplotlib_challenge
