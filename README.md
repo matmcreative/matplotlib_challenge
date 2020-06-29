@@ -1,11 +1,18 @@
-HEAD
-# Matplotlib Homework - The Power of Plots
+# Pharmaceutical Data Visualization | Matplotlib
 
-## Background
+## Table of Contents
+* [Objective](#Objective)
+* [Technologies](#Technologies)
+* [Process](#Process)
+* [Visualization](#Visualization)
+* [Troubleshooting](#Troubleshooting)
 
+<img src="Images/Laboratory.jpg" width=350 align=right>
+# Objective
 What good is data without a good plot to tell the story?
 
 So, let's take what you've learned about Python Matplotlib and apply it to a real-world situation and dataset:
+Dataset
 
 ![Laboratory](Images/Laboratory.jpg)
 
