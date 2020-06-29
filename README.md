@@ -44,7 +44,7 @@ summarystats = summarystats.rename(columns = {"Mouse ID" : "Trials"})
 
 summarystats.head()
 ```
-<img src="Pymaceuticals/summarystats.png.jpg" width=350 align=right>
+<img src="Pymaceuticals/summarystats.png" width=350 align=right>
 
 * Generate a bar plot using both Pandas's `DataFrame.plot()` and Matplotlib's `pyplot` that shows the number of data points for each treatment regimen.
 
